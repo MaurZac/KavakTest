@@ -13,6 +13,8 @@
 		C5505B372833237B00F7F155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5505B352833237B00F7F155 /* Main.storyboard */; };
 		C5505B392833237C00F7F155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5505B382833237C00F7F155 /* Assets.xcassets */; };
 		C5505B3C2833237C00F7F155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5505B3A2833237C00F7F155 /* LaunchScreen.storyboard */; };
+		C5505B442833408600F7F155 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5505B432833408600F7F155 /* Entity.swift */; };
+		C5505B46283341F000F7F155 /* BookEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5505B45283341F000F7F155 /* BookEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C5505B382833237C00F7F155 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5505B3B2833237C00F7F155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5505B3D2833237C00F7F155 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5505B432833408600F7F155 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		C5505B45283341F000F7F155 /* BookEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				C5505B382833237C00F7F155 /* Assets.xcassets */,
 				C5505B3A2833237C00F7F155 /* LaunchScreen.storyboard */,
 				C5505B3D2833237C00F7F155 /* Info.plist */,
+				C5505B432833408600F7F155 /* Entity.swift */,
+				C5505B45283341F000F7F155 /* BookEntity.swift */,
 			);
 			path = KavakTest;
 			sourceTree = "<group>";
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5505B442833408600F7F155 /* Entity.swift in Sources */,
 				C5505B342833237B00F7F155 /* ViewController.swift in Sources */,
 				C5505B302833237B00F7F155 /* AppDelegate.swift in Sources */,
+				C5505B46283341F000F7F155 /* BookEntity.swift in Sources */,
 				C5505B322833237B00F7F155 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
