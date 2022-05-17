@@ -15,6 +15,7 @@
 		C5505B3C2833237C00F7F155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5505B3A2833237C00F7F155 /* LaunchScreen.storyboard */; };
 		C5505B442833408600F7F155 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5505B432833408600F7F155 /* Entity.swift */; };
 		C5505B46283341F000F7F155 /* BookEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5505B45283341F000F7F155 /* BookEntity.swift */; };
+		C5505B4A2833505D00F7F155 /* BooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5505B492833505D00F7F155 /* BooksTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C5505B3D2833237C00F7F155 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5505B432833408600F7F155 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		C5505B45283341F000F7F155 /* BookEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEntity.swift; sourceTree = "<group>"; };
+		C5505B492833505D00F7F155 /* BooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				C5505B3D2833237C00F7F155 /* Info.plist */,
 				C5505B432833408600F7F155 /* Entity.swift */,
 				C5505B45283341F000F7F155 /* BookEntity.swift */,
+				C5505B492833505D00F7F155 /* BooksTableViewCell.swift */,
 			);
 			path = KavakTest;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5505B4A2833505D00F7F155 /* BooksTableViewCell.swift in Sources */,
 				C5505B442833408600F7F155 /* Entity.swift in Sources */,
 				C5505B342833237B00F7F155 /* ViewController.swift in Sources */,
 				C5505B302833237B00F7F155 /* AppDelegate.swift in Sources */,

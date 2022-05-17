@@ -19,13 +19,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         configTable()
         self.title = "Kavak Book's"
         view.backgroundColor = .orange
-        tableBooks.register(UITableViewCell.self, forCellReuseIdentifier: "bookCell")
+        tableBooks.register(BooksTableViewCell.self, forCellReuseIdentifier: BooksTableViewCell.identifier)
         DispatchQueue.main.async { [self] in
-            tableBooks.reloadData()
-            tableBooks.dataSource = self
             tableBooks.delegate = self
+            tableBooks.dataSource = self
         }
-        
+        tableBooks.reloadData()
     }
     
     func configTable(){
@@ -68,12 +67,38 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableBooks.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: BooksTableViewCell.identifier, for: indexPath) as! BooksTableViewCell
         print("interactor \(resBooks[0].results.books?[indexPath.row].title)")
-      cell.textLabel?.text  = resBooks[0].results.books?[indexPath.row].title
+        cell.nameLabel.text = resBooks[0].results.books?[indexPath.row].title
+        cell.bookImg.downloaded(from: resBooks[0].results.books?[indexPath.row].img ?? "noimage")
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
 
+}
+
+extension UIImageView {
+    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
+            }
+        }.resume()
+    }
+    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
 }
 
